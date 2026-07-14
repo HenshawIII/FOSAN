@@ -205,7 +205,7 @@ export function GetInvolvedSection() {
               </div>
 
               <div className="flex flex-col gap-8 border-t border-fosan-black/10 pt-8 lg:flex-row lg:items-stretch lg:justify-between lg:gap-12 lg:pt-10">
-                <dl className="grid gap-6 sm:grid-cols-2 sm:gap-x-10 lg:flex-1 lg:max-w-xl">
+                <dl className="grid gap-6 xl:grid-cols-2 sm:gap-x-10 lg:flex-1 lg:max-w-xl">
                   <div>
                     <dt className="font-body text-[11px] font-semibold uppercase tracking-wider text-fosan-black/45">
                       Email

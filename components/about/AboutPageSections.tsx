@@ -236,10 +236,10 @@ export function AboutPageSections() {
           aria-hidden
         />
         <div className="relative mx-auto max-w-[95%] px-4 sm:max-w-[90%] sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-14 lg:items-stretch">
-            <div className="lg:col-span-5">
+          <div className="grid gap-10 xl:grid-cols-12 xl:gap-14 xl:items-stretch">
+            <div className="xl:col-span-5">
               <div
-                className="about-why-reveal relative overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-xl lg:min-h-[min(70vh,44rem)]"
+                className="about-why-reveal relative overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-xl xl:min-h-[min(70vh,44rem)]"
                 aria-hidden
               >
                 <Image
@@ -256,7 +256,7 @@ export function AboutPageSections() {
                 />
               </div>
             </div>
-            <div className="lg:col-span-7 flex flex-col justify-center">
+            <div className="xl:col-span-7 flex flex-col justify-center">
               <p className="about-why-reveal font-body text-sm font-semibold tracking-wide text-fosan-gold">
                 Why We Exist
               </p>

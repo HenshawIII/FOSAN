@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinksDesktop = [
@@ -22,9 +22,9 @@ const navLinksMobile = [
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -36,6 +36,41 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const onPointerDown = (event: PointerEvent) => {
+      const target = event.target as Node | null;
+      if (headerRef.current && target && !headerRef.current.contains(target)) {
+        setOpen(false);
+      }
+    };
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    const media = window.matchMedia("(min-width: 768px)");
+    const onViewportChange = (event: MediaQueryListEvent | MediaQueryList) => {
+      if (event.matches) setOpen(false);
+    };
+
+    onViewportChange(media);
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    media.addEventListener("change", onViewportChange);
+
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+      media.removeEventListener("change", onViewportChange);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   const headerSurface = isScrolled
     ? "border-b border-white/10 bg-fosan-green/20 backdrop-blur-md"
     : "border-b border-transparent bg-transparent backdrop-blur-0";
@@ -43,11 +78,11 @@ export function SiteHeader() {
   const navLinkClass =
     "font-body text-sm font-medium text-white/95 transition-colors hover:text-[#f9c742] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f9c742]";
 
-  const menuBtnClass =
-    "rounded-md p-2 text-white md:hidden";
+  const menuBtnClass = "rounded-md p-2 text-white md:hidden";
 
   return (
     <header
+      ref={headerRef}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out ${headerSurface}`}
       role="banner"
     >
@@ -64,13 +99,9 @@ export function SiteHeader() {
             className="h-16 w-32 sm:h-16 sm:w-32"
             priority
           />
-         
         </Link>
 
-        <nav
-          aria-label="Main"
-          className="hidden items-center gap-8 md:flex"
-        >
+        <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
           {navLinksDesktop.map((link) => (
             <Link key={link.href} href={link.href} className={navLinkClass}>
               {link.label}

@@ -96,14 +96,37 @@ export default function ImpactPage() {
         </ContentSection>
         <FosanInActionGallery />
 
-        <section className="bg-[#fafbfb] py-16 sm:py-20">
+        <section className="bg-[#fafbfb] py-16 sm:py-20" aria-labelledby="press-heading">
           <div className="mx-auto max-w-[95%] px-4 sm:max-w-[90%] sm:px-6 lg:px-8">
-            <ExternalCredibilityCard
-              title="FAO Collaboration Reference"
-              body="FoSAN's contribution is documented by FAO/WHO Codex in 'Safer Food, Better Health: Making Food Safety Ambassadors' (13/06/2022), reinforcing FoSAN's credibility in food safety outreach."
-              href="https://www.fao.org/fao-who-codexalimentarius/news-and-events/news-details/en/c/1539318/"
-              ctaLabel="View FAO reference"
-            />
+            <p className="font-body text-sm font-semibold tracking-wide text-fosan-green">
+              In the Press
+            </p>
+            <h2
+              id="press-heading"
+              className="font-heading mt-3 text-2xl font-normal leading-tight text-fosan-black sm:text-4xl"
+            >
+              Recognized by FAO/WHO Codex
+            </h2>
+            <p className="font-body mt-4 max-w-3xl text-base leading-relaxed text-fosan-black/80 sm:text-lg">
+              FoSAN’s work has been featured by the Codex Alimentarius Commission,
+              documenting our ambassadors’ outreach and World Food Safety Day leadership.
+            </p>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              <ExternalCredibilityCard
+                title="Safer Food, Better Health: Making Food Safety Ambassadors"
+                body="FAO/WHO Codex covers FoSAN’s World Food Safety Day summit and ambassadors’ outreach (13/06/2022), reinforcing our credibility in community food safety education."
+                href="https://www.fao.org/fao-who-codexalimentarius/news-and-events/news-details/en/c/1539318/"
+                imageSrc="/press/fao-safer-food-ambassadors.png"
+                imageAlt="Codex article featuring FoSAN ambassadors at a World Food Safety Day event"
+              />
+              <ExternalCredibilityCard
+                title="Nigerian university professor sends a clear message on World Food Safety Day"
+                body="Codex highlights Professor Folake Henshaw’s World Food Safety Day address at FUNAAB (15/06/2021), where she made the case that unsafe food is not food."
+                href="https://www.fao.org/fao-who-codexalimentarius/news-and-events/news-details/en/c/1412036/"
+                imageSrc="/press/fao-world-food-safety-day-2021.png"
+                imageAlt="Codex article featuring Professor Folake Henshaw speaking on World Food Safety Day"
+              />
+            </div>
           </div>
         </section>
       </main>
