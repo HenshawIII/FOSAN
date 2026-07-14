@@ -70,7 +70,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-6rem)] w-full max-w-[95%] flex-col gap-10 px-4 sm:max-w-[90%] sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:pb-24 lg:gap-12 lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-6rem)] w-full max-w-[95%] flex-col gap-10 px-4 sm:max-w-[90%] sm:px-6 xl:flex-row xl:items-end xl:justify-between lg:pb-24 lg:gap-12 lg:px-8">
         <div
           id="hero-content"
           className="relative flex min-h-0 flex-1 flex-col justify-center"

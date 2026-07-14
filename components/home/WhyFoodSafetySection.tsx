@@ -9,9 +9,8 @@ import { Heart, Shield, TrendingUp, Users } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/** Replace with a `/public` asset when ready (e.g. `/impact/food-safety.jpg`). */
-const sectionImage =
-  "https://picsum.photos/seed/fosan-why-food-safety/1000/1200";
+/** Editorial photo for the why section. */
+const sectionImage = "/FOSA1.jpeg";
 
 const points = [
   {
@@ -97,7 +96,7 @@ export function WhyFoodSafetySection() {
       className="bg-[#fafbfb] py-20 sm:py-24"
       aria-labelledby="why-food-safety-heading"
     >
-      <div className="mx-auto grid max-w-[95%] gap-12 px-4 sm:max-w-[90%] sm:px-6 lg:grid-cols-12 lg:items-start lg:gap-14 lg:px-8">
+      <div className="mx-auto grid max-w-[95%] gap-12 px-4 sm:max-w-[90%] sm:px-6 xl:grid-cols-12 xl:items-start lg:gap-14 lg:px-8">
         {/* Copy + list — left on desktop */}
         <div className="lg:col-span-6">
           <p className="why-reveal-text font-body text-sm font-semibold tracking-wide text-fosan-green">

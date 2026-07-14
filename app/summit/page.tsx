@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Food Safety Ambassadors’ Summit",
   description:
     "A gathering for learning, collaboration, and capacity development in food safety.",
+  alternates: { canonical: "/summit" },
 };
 
 export default function SummitPage() {
@@ -28,7 +29,7 @@ export default function SummitPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           eyebrow="Summit"
-          eyebrowIcon={UsersRound}
+          eyebrowIcon={<UsersRound className="h-4 w-4 text-fosan-gold" aria-hidden />}
           title={
             <>
               Food Safety Ambassadors’ <span className="text-fosan-gold">Summit</span>

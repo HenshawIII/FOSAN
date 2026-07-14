@@ -114,7 +114,7 @@ export function ProgramsSection() {
     <section
       ref={rootRef}
       id="programs"
-      className="overflow-x-clip bg-white py-20 sm:py-24"
+      className="overflow-x-clip bg-white pt-8 pb-16 sm:pt-24 sm:pb-24 md:pt-12 md:pb-24 lg:pt-24 lg:pb-24"
       aria-labelledby="programs-heading"
     >
       <div className="mx-auto w-full max-w-[95%] min-w-0 px-4 sm:max-w-[90%] sm:px-6 lg:px-8">

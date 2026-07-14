@@ -32,7 +32,7 @@ export function AboutHero() {
   return (
     <section
       ref={rootRef}
-      className="relative isolate min-h-[min(72svh,36rem)] w-full overflow-hidden pt-28 pb-16 sm:pb-20"
+      className="relative isolate min-h-[min(72svh,36rem)] w-full overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-20"
       aria-labelledby="about-page-heading"
     >
       <div className="absolute inset-0 z-0 bg-fosan-green">
@@ -58,7 +58,7 @@ export function AboutHero() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[95%] flex-col gap-8 px-4 sm:max-w-[90%] sm:px-6 lg:px-8 lg:mt-16 mt-24">
+      <div className="relative z-10 mx-auto flex w-full max-w-[95%] flex-col gap-8 px-4 sm:max-w-[90%] sm:px-6 lg:px-8 mt-10 sm:mt-16 lg:mt-16">
         <p className="about-hero-anim inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/10 px-4 py-2 font-body text-xs font-medium uppercase tracking-wider text-white/95 backdrop-blur-sm sm:px-5 sm:text-sm">
           <Network className="h-4 w-4 text-fosan-gold" aria-hidden />
           Food Safety Ambassadors Network

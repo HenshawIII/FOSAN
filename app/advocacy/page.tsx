@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Advocacy and Policy",
   description:
     "FoSAN supports policy engagement and institutional collaboration to strengthen food safety laws, standards, and implementation.",
+  alternates: { canonical: "/advocacy" },
 };
 
 export default function AdvocacyPage() {
@@ -19,7 +20,7 @@ export default function AdvocacyPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           eyebrow="Advocacy"
-          eyebrowIcon={Scale}
+          eyebrowIcon={<Scale className="h-4 w-4 text-fosan-gold" aria-hidden />}
           title={
             <>
               Advocating for Stronger{" "}

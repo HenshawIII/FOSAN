@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   title: "Our Programs and Services",
   description:
     "FoSAN delivers education, training, advocacy, and engagement initiatives designed to improve food safety knowledge and practice.",
+  alternates: { canonical: "/programs" },
 };
 
 export default function ProgramsPage() {
@@ -42,7 +43,7 @@ export default function ProgramsPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           eyebrow="Programs"
-          eyebrowIcon={BriefcaseBusiness}
+          eyebrowIcon={<BriefcaseBusiness className="h-4 w-4 text-fosan-gold" aria-hidden />}
           title={
             <>
               Our <span className="text-fosan-gold">Programs</span> and Services

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "About FoSAN",
   description:
     "A network of scientists and professionals advancing food safety education, awareness, and action across Nigeria.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

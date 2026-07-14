@@ -19,9 +19,8 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-/** One editorial photo for the whole section — swap for `/public` path when ready. */
-const sectionImage =
-  "https://picsum.photos/seed/fosan-who-we-serve/900/1100";
+/** One editorial photo for the whole section. */
+const sectionImage = "/FOSA2.jpeg";
 
 const stakeholders = [
   {
@@ -128,9 +127,9 @@ export function WhoWeServeSection() {
           production, handling, service, regulation, and consumption.
         </p>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14">
+        <div className="mt-12 grid gap-12 xl:grid-cols-12 xl:items-start lg:gap-14">
           {/* Single editorial image — avoids per-item imagery */}
-          <div className="who-serve-reveal relative lg:col-span-5">
+          <div className="who-serve-reveal relative xl:col-span-5">
             <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-fosan-cream shadow-lg ring-1 ring-fosan-black/10 sm:aspect-[5/4] lg:sticky lg:top-28 lg:aspect-auto lg:min-h-[min(72vh,36rem)]">
               <Image
                 src={sectionImage}
@@ -152,7 +151,7 @@ export function WhoWeServeSection() {
           </div>
 
           {/* Dense list: two columns, icon + line — scannable without 9 photos */}
-          <div className="lg:col-span-7">
+          <div className="xl:col-span-7">
             <div className="rounded-2xl bg-[#fafbfb] p-6 ring-1 ring-fosan-black/5 sm:p-8">
               <p className="who-serve-reveal font-body text-xs font-semibold uppercase tracking-wider text-fosan-black/50">
                 Stakeholder groups

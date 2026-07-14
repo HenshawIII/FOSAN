@@ -18,9 +18,8 @@ const benefits = [
   "Contribute to SDG-related outcomes in food security and health",
 ] as const;
 
-/** Hero image for partner block — swap for `/public` asset when ready. */
-const partnerImage =
-  "https://picsum.photos/seed/fosan-partner-impact/900/1000";
+/** Hero image for partner block. */
+const partnerImage = "/partner.webp";
 
 export function PartnerImpactSection() {
   const rootRef = useRef<HTMLElement>(null);

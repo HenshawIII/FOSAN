@@ -503,8 +503,8 @@ Three mini stats showing:
 "To partner with, sponsor, or volunteer with FoSAN, get in touch with us today."
 
 **Contact Info:**
-- Email: info@fosan.org
-- Phone: +234 123 456 7890
+- Email: info@foodsafetyambassadors.org
+- Phone: 0803 405 6311
 
 **CTA:**
 "Get Started Today" (Golden Yellow button)

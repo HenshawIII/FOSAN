@@ -13,6 +13,11 @@ import {
   Phone,
   Users,
 } from "lucide-react";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/site";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -207,14 +212,14 @@ export function GetInvolvedSection() {
                     </dt>
                     <dd className="mt-2">
                       <a
-                        href="mailto:info@fosan.org"
+                        href={`mailto:${CONTACT_EMAIL}`}
                         className="inline-flex items-center gap-2 font-body text-sm font-medium text-fosan-black transition-colors hover:text-fosan-green sm:text-base"
                       >
                         <Mail
                           className="h-4 w-4 shrink-0 text-fosan-green/80"
                           aria-hidden
                         />
-                        info@fosan.org
+                        {CONTACT_EMAIL}
                       </a>
                     </dd>
                   </div>
@@ -224,14 +229,14 @@ export function GetInvolvedSection() {
                     </dt>
                     <dd className="mt-2">
                       <a
-                        href="tel:+2341234567890"
+                        href={`tel:${CONTACT_PHONE_TEL}`}
                         className="inline-flex items-center gap-2 font-body text-sm font-medium text-fosan-black transition-colors hover:text-fosan-green sm:text-base"
                       >
                         <Phone
                           className="h-4 w-4 shrink-0 text-fosan-green/80"
                           aria-hidden
                         />
-                        +234 123 456 7890
+                        {CONTACT_PHONE_DISPLAY}
                       </a>
                     </dd>
                   </div>
@@ -239,7 +244,7 @@ export function GetInvolvedSection() {
 
                 <div className="flex flex-col justify-center border-t border-fosan-black/10 pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
                   <Link
-                    href="mailto:info@fosan.org"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-fosan-gold px-8 py-3.5 font-body text-base font-semibold text-fosan-green shadow-sm transition-[transform,box-shadow] group hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fosan-green sm:py-4 lg:min-w-58 lg:self-start"
                   >
                     Get started today

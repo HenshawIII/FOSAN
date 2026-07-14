@@ -3,6 +3,12 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+  SITE_URL,
+} from "@/lib/site";
 
 const convener = {
   name: "Professor Folake Olayinka Henshaw",
@@ -191,9 +197,33 @@ export function ConvenerProfileSection() {
                   <p className="font-body mt-3 text-sm leading-relaxed text-fosan-black/80 sm:text-base">
                     For speaking engagements, partnerships, or collaboration with FoSAN, please contact:
                   </p>
-                  <p className="font-body mt-2 text-sm text-fosan-black/70 sm:text-base">
-                    (Insert contact email, phone, website, and social media handles)
-                  </p>
+                  <ul className="font-body mt-3 space-y-2 text-sm text-fosan-black/80 sm:text-base">
+                    <li>
+                      <a
+                        href={`mailto:${CONTACT_EMAIL}`}
+                        className="text-fosan-green underline-offset-2 hover:underline"
+                      >
+                        {CONTACT_EMAIL}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href={`tel:${CONTACT_PHONE_TEL}`}
+                        className="text-fosan-green underline-offset-2 hover:underline"
+                      >
+                        {CONTACT_PHONE_DISPLAY}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href={SITE_URL}
+                        className="text-fosan-green underline-offset-2 hover:underline"
+                        rel="noopener noreferrer"
+                      >
+                        www.foodsafetyambassadors.org
+                      </a>
+                    </li>
+                  </ul>
                 </article>
               </div>
             </div>

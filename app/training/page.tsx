@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   title: "Training",
   description:
     "FoSAN provides practical, science-based food safety training for stakeholders across the food value chain.",
+  alternates: { canonical: "/training" },
 };
 
 export default function TrainingPage() {
@@ -41,7 +42,7 @@ export default function TrainingPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           eyebrow="Training"
-          eyebrowIcon={GraduationCap}
+          eyebrowIcon={<GraduationCap className="h-4 w-4 text-fosan-gold" aria-hidden />}
           title={
             <>
               Training for <span className="text-fosan-gold">Safer Food</span>{" "}

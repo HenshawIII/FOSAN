@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Food Safety Resources",
   description:
     "Educational materials, awareness content, and practical information to support safer food handling and better food safety practices.",
+  alternates: { canonical: "/resources" },
 };
 
 export default function ResourcesPage() {
@@ -28,7 +29,7 @@ export default function ResourcesPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           eyebrow="Resources"
-          eyebrowIcon={Library}
+          eyebrowIcon={<Library className="h-4 w-4 text-fosan-gold" aria-hidden />}
           title={
             <>
               Food Safety <span className="text-fosan-gold">Resources</span>

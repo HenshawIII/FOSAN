@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Get Involved",
   description:
     "Join FoSAN in expanding food safety education, strengthening advocacy, and building healthier communities.",
+  alternates: { canonical: "/get-involved" },
 };
 
 export default function GetInvolvedPage() {
@@ -19,7 +20,7 @@ export default function GetInvolvedPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           eyebrow="Get Involved"
-          eyebrowIcon={HandHeart}
+          eyebrowIcon={<HandHeart className="h-4 w-4 text-fosan-gold" aria-hidden />}
           title={
             <>
               Get <span className="text-fosan-gold">Involved</span>

@@ -81,7 +81,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             href="/get-involved"
-            className="font-body hidden rounded-full bg-fosan-gold px-5 py-2.5 text-sm font-semibold text-fosan-green shadow-sm transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:inline-flex sm:items-center sm:gap-2"
+            className="font-body inline-flex items-center gap-2 rounded-full bg-fosan-gold px-3.5 py-2 text-xs font-semibold text-fosan-green shadow-sm transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-5 sm:py-2.5 sm:text-sm md:mr-0"
           >
             Get Involved
           </Link>

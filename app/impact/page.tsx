@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Impact",
   description:
     "How FoSAN strengthens food safety awareness, practical compliance, and resilient food systems.",
+  alternates: { canonical: "/impact" },
 };
 
 export default function ImpactPage() {
@@ -22,7 +23,7 @@ export default function ImpactPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           eyebrow="Impact"
-          eyebrowIcon={ShieldCheck}
+          eyebrowIcon={<ShieldCheck className="h-4 w-4 text-fosan-gold" aria-hidden />}
           title={
             <>
               Why <span className="text-fosan-gold">FoSAN</span> Matters
